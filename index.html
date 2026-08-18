@@ -1,55 +1,263 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pdrmottadev - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pdrmottadev — Web, App, Data &amp; DBA</title>
+<meta name="description" content="pdrmottadev: website development, application development, data analysis and database administration. Maintainer of GSBD Util.">
+<link rel="icon" type="image/svg+xml" href="media/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <a href="#home" class="nav-link" data-section="home">Home</a>
-        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
-        <a href="#donate" class="nav-link" data-section="donate">Donate</a>
-        <a href="#about" class="nav-link" data-section="about">About</a>
-        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
-    </nav>
-    
-    <div id="content">
-        <div id="home" class="section">
-            <h1>Welcome to My Portfólio</h1>
-            <p>This is my </p>
-        </div>
-        <div id="projects" class="section" style="display:none;">
-            <h1>Projects</h1>
-            <p>Here are some of my projects:</p>
-            <h2>GSBD Util</h2>
-            <p>GSBD Util is a database management tool designed for dumping and restoring databases.</p>
-            <p>It is compatible with several DBMSs, including Microsoft SQL Server, MySQL, MariaDB, Oracle* (limited support), and Firebird 2.5.</p>
-            <a href="https://sourceforge.net/projects/gsbd-util/" target="_blank">Download on SourceForge</a>
-        </div>
-        <div id="donate" class="section" style="display:none;">
-            <h1>Donate</h1>    
-            <h1>Do you want to support my work? </h1>
-            <h1>You can donate any amount to help me keep this project alive.</h1>
-            <h2>Donate via Pix(For brazilian users)</h2>
-            <h2>Key: 5724d44b-7060-4794-942e-c2b0411acf57</h2>
-            <img src="media/pix.png" alt="Pix QR Code" width="200" height="200">
-            <h2>Donate via PayPal</h2>
-            <h2></h2>
-        </div>
-        <div id="about" class="section" style="display:none;">
-            <h1>About Me</h1>
-            <p>Informações sobre mim.</p>
-        </div>
-        <div id="contact" class="section" style="display:none;">
-            <h1>Contact</h1>
-            <h2>Email: pdr.motta@gmail.com</h2>
-            <h2>Github: https://github.com/pdrmottadev </h2>
-            <p>Form to contact me.</p>
-        </div>
-    </div>
+<!--
+THESIS: The practice as a living package-registry entry — proof reads like a real README, never a marketing page.
+OWN-WORLD: paper #F7F7F5, ink #14161A, signal-green #1B7A4B, sponsor-amber #D98F2B; Bricolage Grotesque display, Hanken Grotesk body, JetBrains Mono metadata; flat vector badges, hairline table rules, dependency-list and changelog grammar.
+STORY: a visiting client scans real badges and a compatibility-proven tool (GSBD Util) before anything else, understands the four services on offer, and reaches pdrmottadev directly — no invented claims.
+FIRST VIEWPORT: sticky tab bar (wordmark, section tabs, locale badge) above a hero — full badge row, large wordmark, package-style tagline, an install-style CTA that copies the contact email.
+FORM: assigned direction "The Registry Entry", index 5 of 7 grounded candidates, seed key 0f449575.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md.
+-->
+<a class="skip-link" href="#overview" data-en="Skip to content" data-pt="Pular para o conteúdo">Skip to content</a>
 
-    <script src="script.js"></script>
+<header class="topbar" id="topbar">
+  <a class="topbar__mark" href="#overview" aria-label="pdrmottadev — back to top">
+    <svg class="icon icon--mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 2 21 7 21 17 12 22 3 17 3 7 Z"/>
+      <path class="icon--mark__seam" d="M3 7 12 12 21 7"/>
+      <path d="M12 12 12 22"/>
+    </svg>
+    <span class="topbar__name">pdrmottadev</span>
+  </a>
+
+  <nav class="topbar__nav" aria-label="Primary">
+    <a class="topbar__tab" href="#services" data-en="Services" data-pt="Serviços">Services</a>
+    <a class="topbar__tab" href="#proof" data-en="Projects" data-pt="Projetos">Projects</a>
+    <a class="topbar__tab" href="#about" data-en="About" data-pt="Sobre">About</a>
+    <a class="topbar__tab" href="#sponsor" data-en="Sponsor" data-pt="Apoiar">Sponsor</a>
+    <a class="topbar__tab" href="#contact" data-en="Contact" data-pt="Contato">Contact</a>
+  </nav>
+
+  <button class="topbar__locale" id="localeToggle" type="button" aria-pressed="false">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M17 3l4 4-4 4"/><path d="M21 7H9"/><path d="M7 21l-4-4 4-4"/><path d="M3 17h12"/>
+    </svg>
+    <span id="localeLabel">en</span>
+  </button>
+</header>
+
+<main id="content">
+
+  <section id="overview" class="hero">
+    <ul class="hero__badges" aria-label="Status">
+      <li>
+        <span class="badge badge--status">
+          <span class="badge__dot" aria-hidden="true"></span>
+          <span data-en="available for new work" data-pt="disponível para novos projetos">available for new work</span>
+        </span>
+      </li>
+      <li>
+        <span class="badge" data-en="services: web · app · data · dba" data-pt="serviços: web · app · dados · dba">services: web · app · data · dba</span>
+      </li>
+      <li>
+        <a class="badge badge--link" href="#proof">
+          <span data-en="projects: gsbd-util" data-pt="projetos: gsbd-util">projects: gsbd-util</span>
+          <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </a>
+      </li>
+    </ul>
+
+    <h1 class="hero__title">pdrmottadev</h1>
+    <p class="hero__tagline" data-en="Web, application, data, and database work — built and maintained, not just delivered." data-pt="Web, aplicações, dados e bancos de dados — construído e mantido, não só entregue.">Web, application, data, and database work — built and maintained, not just delivered.</p>
+
+    <div class="cta-command">
+      <span class="cta-command__prompt" aria-hidden="true">$</span>
+      <code class="cta-command__text">contact --engineer=pdrmottadev --services=web,app,data,dba</code>
+      <button class="cta-command__copy" id="copyEmailBtn" type="button" data-default-en="Copy email" data-default-pt="Copiar e-mail" data-done-en="Copied" data-done-pt="Copiado">
+        <svg class="icon icon--sm cta-command__copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>
+        </svg>
+        <svg class="icon icon--sm cta-command__check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 12l5 5L20 6"/>
+        </svg>
+        <span data-en="Copy email" data-pt="Copiar e-mail">Copy email</span>
+      </button>
+    </div>
+    <p class="cta-command__hint" id="copyHint" role="status" aria-live="polite"></p>
+    <a class="hero__direct-link" href="mailto:pdr.motta@gmail.com" data-en="or email pdr.motta@gmail.com directly" data-pt="ou envie um e-mail direto para pdr.motta@gmail.com">or email pdr.motta@gmail.com directly</a>
+  </section>
+
+  <section id="services" class="services">
+    <h2 class="section-label" data-en="services" data-pt="serviços">services</h2>
+    <ul class="deps">
+      <li class="deps__item">
+        <div class="deps__row">
+          <span class="deps__name">"website-development"</span>
+          <span class="badge badge--status badge--sm"><span class="badge__dot" aria-hidden="true"></span><span data-en="available" data-pt="disponível">available</span></span>
+        </div>
+        <p class="deps__desc" data-en="Design and build fast, maintainable websites — from marketing pages to full custom builds." data-pt="Sites rápidos e fáceis de manter — de páginas institucionais a construções sob medida.">Design and build fast, maintainable websites — from marketing pages to full custom builds.</p>
+      </li>
+      <li class="deps__item">
+        <div class="deps__row">
+          <span class="deps__name">"application-development"</span>
+          <span class="badge badge--status badge--sm"><span class="badge__dot" aria-hidden="true"></span><span data-en="available" data-pt="disponível">available</span></span>
+        </div>
+        <p class="deps__desc" data-en="Web and desktop applications built around how your business actually works." data-pt="Aplicações web e desktop construídas ao redor de como o seu negócio realmente funciona.">Web and desktop applications built around how your business actually works.</p>
+      </li>
+      <li class="deps__item">
+        <div class="deps__row">
+          <span class="deps__name">"data-analysis"</span>
+          <span class="badge badge--status badge--sm"><span class="badge__dot" aria-hidden="true"></span><span data-en="available" data-pt="disponível">available</span></span>
+        </div>
+        <p class="deps__desc" data-en="Turn raw data into decisions: reporting, dashboards, and ad-hoc analysis." data-pt="Transformo dados brutos em decisões: relatórios, dashboards e análises sob demanda.">Turn raw data into decisions: reporting, dashboards, and ad-hoc analysis.</p>
+      </li>
+      <li class="deps__item">
+        <div class="deps__row">
+          <span class="deps__name">"database-administration"</span>
+          <span class="badge badge--status badge--sm"><span class="badge__dot" aria-hidden="true"></span><span data-en="available" data-pt="disponível">available</span></span>
+        </div>
+        <p class="deps__desc" data-en="Schema design, performance tuning, backup strategy, and cross-DBMS migrations." data-pt="Modelagem de dados, tuning de performance, estratégia de backup e migrações entre SGBDs.">Schema design, performance tuning, backup strategy, and cross-DBMS migrations.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="proof" class="proof">
+    <h2 class="section-label" data-en="projects" data-pt="projetos">projects</h2>
+    <div class="projects">
+      <article class="package-card">
+        <header class="package-card__head">
+          <span class="package-card__icon" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 21 7 21 17 12 22 3 17 3 7 Z"/><path d="M3 7 12 12 21 7"/><path d="M12 12 12 22"/></svg>
+          </span>
+          <div class="package-card__title">
+            <h3 class="package-card__name">gsbd-util</h3>
+            <p class="package-card__desc" data-en="Database dump-and-restore tool" data-pt="Ferramenta de dump e restauração de bancos de dados">Database dump-and-restore tool</p>
+          </div>
+          <a class="package-card__link" href="https://sourceforge.net/projects/gsbd-util/" target="_blank" rel="noopener">
+            <span data-en="View on SourceForge" data-pt="Ver no SourceForge">View on SourceForge</span>
+            <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M10 14 20 4"/><path d="M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/></svg>
+          </a>
+        </header>
+        <p class="package-card__body" data-en="GSBD Util is a database dump-and-restore tool I built and maintain. It's the clearest proof of the DBA side of this practice — not a claim, a tool people actually run." data-pt="GSBD Util é uma ferramenta de dump e restauração de bancos de dados que eu desenvolvo e mantenho. É a prova mais clara do lado DBA desta prática — não uma afirmação, uma ferramenta que as pessoas realmente usam.">GSBD Util is a database dump-and-restore tool I built and maintain. It's the clearest proof of the DBA side of this practice — not a claim, a tool people actually run.</p>
+        <div class="compat-matrix">
+          <span class="compat-matrix__label" data-en="compatible with" data-pt="compatível com">compatible with</span>
+          <ul class="compat-matrix__list" aria-label="Compatible database engines">
+            <li>Microsoft SQL Server</li>
+            <li>MySQL</li>
+            <li>MariaDB</li>
+            <li data-en="Oracle (limited support)" data-pt="Oracle (suporte limitado)">Oracle (limited support)</li>
+            <li>Firebird 2.5</li>
+          </ul>
+        </div>
+      </article>
+      <!-- Next project card goes here: repeat the .package-card article above.
+           <div class="compat-matrix"> is GSBD Util-specific (DBMS compatibility);
+           omit it on cards that don't need a compatibility list. -->
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2 class="section-label" data-en="about" data-pt="sobre">about</h2>
+    <div class="changelog">
+      <div class="changelog__entry">
+        <span class="changelog__tag">role</span>
+        <p data-en="Full-stack developer and DBA, working from the interface down to the schema." data-pt="Desenvolvedor full-stack e DBA, atuando da interface ao schema.">Full-stack developer and DBA, working from the interface down to the schema.</p>
+      </div>
+      <div class="changelog__entry">
+        <span class="changelog__tag">practice</span>
+        <p data-en="GSBD Util exists because most tools force you to pick one database engine to support well. This practice runs on the same idea: depth across disciplines, not a single narrow lane." data-pt="O GSBD Util existe porque a maioria das ferramentas obriga você a escolher um único SGBD para suportar bem. Esta prática segue a mesma ideia: profundidade em várias disciplinas, não uma única faixa estreita.">GSBD Util exists because most tools force you to pick one database engine to support well. This practice runs on the same idea: depth across disciplines, not a single narrow lane.</p>
+      </div>
+      <div class="changelog__entry">
+        <span class="changelog__tag" id="siteVersionTag">site v2.0.0</span>
+        <p data-en="This page ships the way the tools it describes do — versioned, iterated, maintained." data-pt="Esta página é entregue do mesmo jeito que as ferramentas que descreve — versionada, iterada, mantida.">This page ships the way the tools it describes do — versioned, iterated, maintained.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sponsor" class="sponsor">
+    <h2 class="section-label" data-en="sponsor" data-pt="apoiar">sponsor</h2>
+    <p class="sponsor__intro" data-en="GSBD Util is free and open source. If it saved you time, consider chipping in to keep it maintained." data-pt="O GSBD Util é gratuito e de código aberto. Se ele te economizou tempo, considere contribuir para mantê-lo.">GSBD Util is free and open source. If it saved you time, consider chipping in to keep it maintained.</p>
+
+    <div class="sponsor__options">
+      <div class="sponsor-card">
+        <div class="sponsor-card__head">
+          <h3>Pix</h3>
+          <span class="sponsor-card__note" data-en="Brazil only" data-pt="Somente Brasil">Brazil only</span>
+        </div>
+        <img class="sponsor-card__qr" src="media/pix.png" alt="Pix QR code for donating to pdrmottadev" width="176" height="176" loading="lazy">
+        <div class="sponsor-card__key-row">
+          <code class="sponsor-card__key">5724d44b-7060-4794-942e-c2b0411acf57</code>
+          <button class="sponsor-card__copy" id="copyPixBtn" type="button" data-default-en="Copy" data-default-pt="Copiar" data-done-en="Copied" data-done-pt="Copiado">
+            <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+            <span data-en="Copy" data-pt="Copiar">Copy</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="sponsor-card sponsor-card--pending">
+        <div class="sponsor-card__head">
+          <h3>PayPal</h3>
+          <span class="badge badge--pending badge--sm" data-en="coming soon" data-pt="em breve">coming soon</span>
+        </div>
+        <p class="sponsor-card__pending-copy" data-en="International donation support is on the way." data-pt="Suporte a doações internacionais está a caminho.">International donation support is on the way.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-label" data-en="contact" data-pt="contato">contact</h2>
+    <div class="contact__grid">
+      <form class="contact-form" id="contactForm">
+        <label class="contact-form__field">
+          <span data-en="Name" data-pt="Nome">Name</span>
+          <input type="text" name="name" id="contactName" required>
+        </label>
+        <label class="contact-form__field">
+          <span data-en="Service" data-pt="Serviço">Service</span>
+          <select name="service" id="contactService">
+            <option value="Website" data-en="Website" data-pt="Site">Website</option>
+            <option value="Application" data-en="Application" data-pt="Aplicação">Application</option>
+            <option value="Data analysis" data-en="Data analysis" data-pt="Análise de dados">Data analysis</option>
+            <option value="Database administration" data-en="Database administration" data-pt="Administração de banco de dados">Database administration</option>
+            <option value="Other" data-en="Other" data-pt="Outro">Other</option>
+          </select>
+        </label>
+        <label class="contact-form__field">
+          <span data-en="Message" data-pt="Mensagem">Message</span>
+          <textarea name="message" id="contactMessage" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="contact-form__submit" data-en="Open in email client" data-pt="Abrir no cliente de e-mail">Open in email client</button>
+      </form>
+      <div class="contact-direct">
+        <a class="contact-direct__link" href="mailto:pdr.motta@gmail.com">
+          <span class="contact-direct__label" data-en="Email" data-pt="E-mail">Email</span>
+          <span class="contact-direct__value">pdr.motta@gmail.com</span>
+        </a>
+        <a class="contact-direct__link" href="https://github.com/pdrmottadev" target="_blank" rel="noopener">
+          <span class="contact-direct__label">GitHub</span>
+          <span class="contact-direct__value">github.com/pdrmottadev</span>
+        </a>
+        <a class="contact-direct__link" href="https://www.linkedin.com/in/joao-pedro-ribeiro-da-motta-a6476416a/" target="_blank" rel="noopener">
+          <span class="contact-direct__label">LinkedIn</span>
+          <span class="contact-direct__value">in/joao-pedro-ribeiro-da-motta</span>
+        </a>
+        <a class="contact-direct__link" href="https://www.instagram.com/pedro.motta.18/" target="_blank" rel="noopener">
+          <span class="contact-direct__label">Instagram</span>
+          <span class="contact-direct__value">@pedro.motta.18</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span class="footer__repo">pdrmottadev/portfolio <span class="footer__version">v2.0.0</span></span>
+  <span class="footer__maintained" data-en="maintained by pdrmottadev" data-pt="mantido por pdrmottadev">maintained by pdrmottadev</span>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
