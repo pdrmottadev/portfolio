@@ -45,9 +45,10 @@ A cross-disciplinary combination of software development and hands-on database a
   - License: **freeware** (free for personal and commercial use; code and brand reserved), © 2019–2026. It is NOT open source — never call it that.
   - Features: SQL editor (per-tab sessions, autocomplete, editable grids, execution plans, CSV import, exports), object designer, scheduled backup jobs (retention, verify-by-restore, AES-256 zip, SFTP/S3/FTP copies, email alerts), schema compare and database copy, production guard, SSH tunnel, CLI (`gsbd-util backup --job <name>`).
   - Integration-tested in containers against 18 server versions.
+- Client project: **laticiniosdovalle.com.br** (live) — company website pdrmottadev built for Laticínios Do Valle, a dairy in Palmital - PR (cheese, cream, concentrated whey, SIF-inspected). Astro static build, AVIF/WebP images, schema.org LocalBusiness, Open Graph, 8 pages incl. privacy/terms/cookies, WhatsApp CTAs, pt-BR only. Screenshot of its home page at `media/projects/laticiniosdovalle.webp`.
 - Donation: Pix key `5724d44b-7060-4794-942e-c2b0411acf57` (Brazil-only payment method), with a QR code image at `media/pix.png`. A PayPal donation link is intended but not yet provided — do not fabricate one.
 - Contact channels: email and GitHub link above are real and confirmed.
-- **Absent, do not fabricate:** no real bio/background text for About yet (real bio is coming from the user); no case studies or named clients for the web/app/data/DBA services beyond GSBD Util; no other projects beyond GSBD Util confirmed yet. The Projects section (`index.html`, `.projects` grid) is now structured to hold more project cards as they're confirmed — do not invent placeholder entries to fill it.
+- **Absent, do not fabricate:** no real bio/background text for About yet (real bio is coming from the user); no case studies or named clients beyond GSBD Util and Laticínios Do Valle; no projects beyond GSBD Util and laticiniosdovalle.com.br confirmed yet. The Projects section (`index.html`, `.projects` list) holds one card per confirmed project — do not invent placeholder entries to fill it.
 
 ## Product Principles
 

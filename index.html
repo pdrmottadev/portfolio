@@ -63,7 +63,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       </li>
       <li>
         <a class="badge badge--link" href="#proof">
-          <span data-en="projects: gsbd-util" data-pt="projetos: gsbd-util">projects: gsbd-util</span>
+          <span><span data-en="projects:" data-pt="projetos:">projects:</span> <span id="projectCount">2</span></span>
           <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
         </a>
       </li>
@@ -98,6 +98,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <span class="badge badge--status badge--sm"><span class="badge__dot" aria-hidden="true"></span><span data-en="available" data-pt="disponível">available</span></span>
         </div>
         <p class="deps__desc" data-en="Design and build fast, maintainable websites — from marketing pages to full custom builds." data-pt="Sites rápidos e fáceis de manter — de páginas institucionais a construções sob medida.">Design and build fast, maintainable websites — from marketing pages to full custom builds.</p>
+        <a class="deps__proof" href="#project-laticiniosdovalle"><span data-en="example:" data-pt="exemplo:">example:</span> laticiniosdovalle.com.br</a>
       </li>
       <li class="deps__item">
         <div class="deps__row">
@@ -119,6 +120,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <span class="badge badge--status badge--sm"><span class="badge__dot" aria-hidden="true"></span><span data-en="available" data-pt="disponível">available</span></span>
         </div>
         <p class="deps__desc" data-en="Schema design, performance tuning, backup strategy, and cross-DBMS migrations." data-pt="Modelagem de dados, tuning de performance, estratégia de backup e migrações entre SGBDs.">Schema design, performance tuning, backup strategy, and cross-DBMS migrations.</p>
+        <a class="deps__proof" href="#project-gsbd-util"><span data-en="example:" data-pt="exemplo:">example:</span> gsbd-util</a>
       </li>
     </ul>
   </section>
@@ -126,7 +128,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <section id="proof" class="proof">
     <h2 class="section-label" data-en="projects" data-pt="projetos">projects</h2>
     <div class="projects">
-      <article class="package-card">
+      <article class="package-card" id="project-gsbd-util">
         <header class="package-card__head">
           <span class="package-card__icon" aria-hidden="true">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 21 7 21 17 12 22 3 17 3 7 Z"/><path d="M3 7 12 12 21 7"/><path d="M12 12 12 22"/></svg>
@@ -201,9 +203,54 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <span class="package-card__cli-comment"># exit 0 = done · 1 = a backup failed · 2 = bad arguments</span></code></pre>
         </div>
       </article>
-      <!-- Next project card goes here: repeat the .package-card article above.
-           <div class="compat-matrix"> is GSBD Util-specific (DBMS compatibility);
-           omit it on cards that don't need a compatibility list. -->
+
+      <article class="package-card package-card--site" id="project-laticiniosdovalle">
+        <header class="package-card__head">
+          <span class="package-card__icon" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>
+          </span>
+          <div class="package-card__title">
+            <h3 class="package-card__name">laticiniosdovalle.com.br</h3>
+            <p class="package-card__desc" data-en="Company website for a dairy producer" data-pt="Site institucional de um laticínio">Company website for a dairy producer</p>
+          </div>
+          <a class="package-card__link" href="https://laticiniosdovalle.com.br/" target="_blank" rel="noopener">
+            <span data-en="Visit site" data-pt="Visitar site">Visit site</span>
+            <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M10 14 20 4"/><path d="M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/></svg>
+          </a>
+        </header>
+
+        <ul class="package-card__meta" aria-label="Project facts">
+          <li><span class="badge badge--status badge--sm"><span class="badge__dot" aria-hidden="true"></span><span data-en="live" data-pt="no ar">live</span></span></li>
+          <li><span class="badge badge--sm" data-en="client work" data-pt="trabalho para cliente">client work</span></li>
+          <li><span class="badge badge--sm">astro · static</span></li>
+          <li><span class="badge badge--sm">pt-BR</span></li>
+        </ul>
+
+        <div class="site-preview">
+          <a class="site-preview__frame" href="https://laticiniosdovalle.com.br/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <span class="site-preview__bar">laticiniosdovalle.com.br</span>
+            <img src="media/projects/laticiniosdovalle.webp" alt="" width="1280" height="800" loading="lazy">
+          </a>
+          <div class="site-preview__body">
+            <p class="package-card__body" data-en="Website for Laticínios Do Valle, a dairy in Palmital, Paraná, that makes cheese, cream and concentrated whey under federal inspection (SIF). It presents the company, its products and its quality standards, and puts visitors one tap away from the sales team on WhatsApp." data-pt="Site da Laticínios Do Valle, laticínio de Palmital (PR) que produz queijos, creme e soro concentrado com Serviço de Inspeção Federal (SIF). Apresenta a empresa, os produtos e os padrões de qualidade, e deixa o visitante a um toque do comercial no WhatsApp.">Website for Laticínios Do Valle, a dairy in Palmital, Paraná, that makes cheese, cream and concentrated whey under federal inspection (SIF). It presents the company, its products and its quality standards, and puts visitors one tap away from the sales team on WhatsApp.</p>
+            <span class="package-card__label" data-en="under the hood" data-pt="por baixo">under the hood</span>
+            <ul class="compat-matrix__list" aria-label="Technical details">
+              <li data-en="Astro static build" data-pt="Build estático em Astro">Astro static build</li>
+              <li data-en="AVIF / WebP images" data-pt="Imagens AVIF / WebP">AVIF / WebP images</li>
+              <li>schema.org LocalBusiness</li>
+              <li data-en="Open Graph cards" data-pt="Cards Open Graph">Open Graph cards</li>
+              <li data-en="8 pages + sitemap" data-pt="8 páginas + sitemap">8 pages + sitemap</li>
+              <li data-en="privacy, terms &amp; cookies" data-pt="privacidade, termos e cookies">privacy, terms &amp; cookies</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- New project: copy the closest article above and give it id="project-<slug>".
+           Website → .package-card--site (screenshot in media/projects/<slug>.webp, 1280×800,
+           taken from the live home page). Tool/app → plain .package-card; keep .compat-matrix
+           and the CLI block only when the project has them. The hero badge counts the
+           articles in .projects automatically (script.js). -->
     </div>
   </section>
 

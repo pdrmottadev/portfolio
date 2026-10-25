@@ -201,8 +201,15 @@
     });
   }
 
+  function fillProjectCount() {
+    var target = document.getElementById('projectCount');
+    if (!target) return;
+    target.textContent = String(document.querySelectorAll('.projects > article').length);
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initLocale();
+    fillProjectCount();
     wireCopyButton('copyEmailBtn', 'pdr.motta@gmail.com');
     wireCopyButton('copyPixBtn', '5724d44b-7060-4794-942e-c2b0411acf57');
     wireEmailHint();

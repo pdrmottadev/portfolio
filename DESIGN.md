@@ -174,6 +174,9 @@ Radius steps by role: 6px (`sm`) for chips and form fields, 10px (`md`) for the 
 ### Package card contents (`proof`)
 Inside the package card, in order: a `package-card__meta` badge row (status badge first, then plain release-fact badges), the body paragraph, the compat matrix (engine chips with a muted `compat-matrix__ver` version suffix and a mono signal-ink note), and `package-card__section` blocks — each opened by a hairline rule and a mono `package-card__label`. The `features` grid (two columns, one below 720px) pairs a mono signal-ink key with body text, reusing the services list's `"kebab-name"` grammar. The `package-card__cli` block is the CTA command's dark surface at label size, with no copy button (nothing to act on) and no border or shadow (it sits inside a card).
 
+### Projects list and the site card
+`.projects` is a single-column list of package cards (each `id="project-<slug>"`), one per confirmed project; the hero's `projects: N` badge counts them in `script.js`. A website uses `package-card--site`: the usual head and meta badges, then a `site-preview` two-column grid (one column below 720px) — a hairline-bordered browser frame (mono URL bar over a 1280×800 WebP screenshot of the live home page, `media/projects/<slug>.webp`) beside the body text and an `under the hood` chip list that reuses the compat-matrix chips. Services may point at their proof with a mono `deps__proof` link (`example: <project>`), only when a real project backs it.
+
 ### Inputs / Fields
 - **Style:** 1px `line-strong` border, `radius-sm`, `paper-raised` background, 16px text (deliberately ≥16px to avoid iOS zoom-on-focus).
 - **Focus:** border steps to signal-green plus a 3px `signal-soft` glow ring — no default browser outline.
