@@ -509,17 +509,33 @@ main > section {
   max-width: var(--measure);
 }
 .deps__proof {
-  display: inline-block;
-  margin-top: var(--space-2);
-  font-family: var(--font-mono);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
   font-size: 0.75rem;
-  color: var(--signal-ink);
   text-decoration: none;
-  border-bottom: 1px solid var(--line-strong);
-  transition: border-color 0.15s ease-out;
+  color: var(--ink);
 }
-.deps__proof:hover {
-  border-color: var(--signal);
+.deps__proof-kind {
+  font-family: var(--font-mono);
+  color: var(--ink-faint);
+  padding-right: var(--space-2);
+  border-right: 1px solid var(--line-strong);
+}
+.deps__proof-name {
+  font-weight: 600;
+  transition: color 0.15s ease-out;
+}
+.deps__proof .icon {
+  color: var(--signal);
+  transition: transform 0.15s ease-out;
+}
+.deps__proof:hover .deps__proof-name {
+  color: var(--signal-ink);
+}
+.deps__proof:hover .icon {
+  transform: translateX(2px);
 }
 
 /* ---------------------------------------------------------------
