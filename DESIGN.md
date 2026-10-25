@@ -171,6 +171,9 @@ Radius steps by role: 6px (`sm`) for chips and form fields, 10px (`md`) for the 
 - **Sponsor card:** `radius-lg`, 1px `line` border, Raised shadow, flat (no shadow+border stacking exception — this one is genuinely a plain bordered card, no shadow token applied beyond `shadow-raised` alone). Pending variant swaps the border to dashed amber and drops to the plain `paper` background.
 - **Internal padding:** 24–32px (`space-5`/`space-6`).
 
+### Package card contents (`proof`)
+Inside the package card, in order: a `package-card__meta` badge row (status badge first, then plain release-fact badges), the body paragraph, the compat matrix (engine chips with a muted `compat-matrix__ver` version suffix and a mono signal-ink note), and `package-card__section` blocks — each opened by a hairline rule and a mono `package-card__label`. The `features` grid (two columns, one below 720px) pairs a mono signal-ink key with body text, reusing the services list's `"kebab-name"` grammar. The `package-card__cli` block is the CTA command's dark surface at label size, with no copy button (nothing to act on) and no border or shadow (it sits inside a card).
+
 ### Inputs / Fields
 - **Style:** 1px `line-strong` border, `radius-sm`, `paper-raised` background, 16px text (deliberately ≥16px to avoid iOS zoom-on-focus).
 - **Focus:** border steps to signal-green plus a 3px `signal-soft` glow ring — no default browser outline.

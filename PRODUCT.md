@@ -8,15 +8,15 @@ web
 
 ## Users
 
-Potential clients evaluating pdrmottadev for hire — people looking for someone to build a website, build an application, do data analysis, or take on DBA (database administration) work. Secondary audience: people who found the GSBD Util open-source tool and want to know who built it, reach the maintainer, or support the project.
+Potential clients evaluating pdrmottadev for hire — people looking for someone to build a website, build an application, do data analysis, or take on DBA (database administration) work. Secondary audience: people who found the GSBD Util tool and want to know who built it, reach the maintainer, or support the project.
 
 ## Product Purpose
 
-A services portfolio ("portfólio de serviços oferecidos") that lets a prospective client review pdrmottadev's capabilities, see proof of real work, and make contact to hire. It also serves as the home base for the GSBD Util open-source project, including a way to support it via donation.
+A services portfolio ("portfólio de serviços oferecidos") that lets a prospective client review pdrmottadev's capabilities, see proof of real work, and make contact to hire. It also serves as the home base for the GSBD Util project, including a way to support it via donation.
 
 ## Positioning
 
-A cross-disciplinary combination of software development and hands-on database administration, demonstrated by a real shipped tool (GSBD Util) rather than claimed credentials: GSBD Util supports dumping/restoring across Microsoft SQL Server, MySQL, MariaDB, Oracle (limited), and Firebird 2.5 — breadth most single-discipline developers or DBAs would not have reason to build.
+A cross-disciplinary combination of software development and hands-on database administration, demonstrated by a real shipped tool (GSBD Util) rather than claimed credentials: GSBD Util does backup/restore and ships a SQL editor for SQL Server, MySQL/MariaDB, PostgreSQL, Oracle, Firebird and SQLite, on Windows, Linux and macOS — breadth most single-discipline developers or DBAs would not have reason to build.
 
 ## Operating Context
 
@@ -39,7 +39,12 @@ A cross-disciplinary combination of software development and hands-on database a
 
 ## Evidence on Hand
 
-- Real project: **GSBD Util** — a database dump/restore tool. Compatible with Microsoft SQL Server, MySQL, MariaDB, Oracle (limited support), and Firebird 2.5. Distributed at https://sourceforge.net/projects/gsbd-util/.
+- Real project: **GSBD Util** (facts from its README, 2026-10) — backup/restore utility and SQL editor. Distributed at https://sourceforge.net/projects/gsbd-util/.
+  - Engines: SQL Server 2008–2022, MySQL 5.7–8.4, MariaDB 10.6–11.4, PostgreSQL 12+, Oracle (Data Pump), Firebird 2.5–5, SQLite 3.
+  - v5.x: C# / .NET 10 + Avalonia, Windows / Linux / macOS 14+; v4.x was Delphi/VCL (legacy). UI in pt-BR and EN.
+  - License: **freeware** (free for personal and commercial use; code and brand reserved), © 2019–2026. It is NOT open source — never call it that.
+  - Features: SQL editor (per-tab sessions, autocomplete, editable grids, execution plans, CSV import, exports), object designer, scheduled backup jobs (retention, verify-by-restore, AES-256 zip, SFTP/S3/FTP copies, email alerts), schema compare and database copy, production guard, SSH tunnel, CLI (`gsbd-util backup --job <name>`).
+  - Integration-tested in containers against 18 server versions.
 - Donation: Pix key `5724d44b-7060-4794-942e-c2b0411acf57` (Brazil-only payment method), with a QR code image at `media/pix.png`. A PayPal donation link is intended but not yet provided — do not fabricate one.
 - Contact channels: email and GitHub link above are real and confirmed.
 - **Absent, do not fabricate:** no real bio/background text for About yet (real bio is coming from the user); no case studies or named clients for the web/app/data/DBA services beyond GSBD Util; no other projects beyond GSBD Util confirmed yet. The Projects section (`index.html`, `.projects` grid) is now structured to hold more project cards as they're confirmed — do not invent placeholder entries to fill it.

@@ -133,23 +133,72 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           </span>
           <div class="package-card__title">
             <h3 class="package-card__name">gsbd-util</h3>
-            <p class="package-card__desc" data-en="Database dump-and-restore tool" data-pt="Ferramenta de dump e restauração de bancos de dados">Database dump-and-restore tool</p>
+            <p class="package-card__desc" data-en="Backup, restore and SQL editor for six database engines" data-pt="Backup, restore e editor SQL para seis SGBDs">Backup, restore and SQL editor for six database engines</p>
           </div>
           <a class="package-card__link" href="https://sourceforge.net/projects/gsbd-util/" target="_blank" rel="noopener">
             <span data-en="View on SourceForge" data-pt="Ver no SourceForge">View on SourceForge</span>
             <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M10 14 20 4"/><path d="M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/></svg>
           </a>
         </header>
-        <p class="package-card__body" data-en="GSBD Util is a database dump-and-restore tool I built and maintain. It's the clearest proof of the DBA side of this practice — not a claim, a tool people actually run." data-pt="GSBD Util é uma ferramenta de dump e restauração de bancos de dados que eu desenvolvo e mantenho. É a prova mais clara do lado DBA desta prática — não uma afirmação, uma ferramenta que as pessoas realmente usam.">GSBD Util is a database dump-and-restore tool I built and maintain. It's the clearest proof of the DBA side of this practice — not a claim, a tool people actually run.</p>
+        <ul class="package-card__meta" aria-label="Release facts">
+          <li><span class="badge badge--status badge--sm"><span class="badge__dot" aria-hidden="true"></span><span data-en="actively maintained" data-pt="em manutenção ativa">actively maintained</span></span></li>
+          <li><span class="badge badge--sm">v5 · C# / .NET 10 + Avalonia</span></li>
+          <li><span class="badge badge--sm">windows · linux · macos</span></li>
+          <li><span class="badge badge--sm">ui: pt-BR · en</span></li>
+          <li><span class="badge badge--sm" data-en="freeware · since 2019" data-pt="freeware · desde 2019">freeware · since 2019</span></li>
+        </ul>
+
+        <p class="package-card__body" data-en="GSBD Util is the backup tool and SQL editor I've built and maintained since 2019. Version 5 is a rewrite from Delphi to C# and Avalonia, so the same app now ships for Windows, Linux and macOS. It's the clearest proof of the DBA side of this practice: each engine's quirks — Oracle Data Pump directories, Firebird page sizes, SQL Server backups that live on the server's disk — are handled in shipped, tested code." data-pt="O GSBD Util é a ferramenta de backup e editor SQL que eu desenvolvo e mantenho desde 2019. A versão 5 foi reescrita de Delphi para C# e Avalonia, e o mesmo programa agora roda no Windows, no Linux e no macOS. É a prova mais clara do lado DBA desta prática: as particularidades de cada SGBD — pastas do Data Pump no Oracle, page size do Firebird, backup do SQL Server gravado no disco do servidor — resolvidas em código entregue e testado.">GSBD Util is the backup tool and SQL editor I've built and maintained since 2019. Version 5 is a rewrite from Delphi to C# and Avalonia, so the same app now ships for Windows, Linux and macOS. It's the clearest proof of the DBA side of this practice: each engine's quirks — Oracle Data Pump directories, Firebird page sizes, SQL Server backups that live on the server's disk — are handled in shipped, tested code.</p>
+
         <div class="compat-matrix">
-          <span class="compat-matrix__label" data-en="compatible with" data-pt="compatível com">compatible with</span>
-          <ul class="compat-matrix__list" aria-label="Compatible database engines">
-            <li>Microsoft SQL Server</li>
-            <li>MySQL</li>
-            <li>MariaDB</li>
-            <li data-en="Oracle (limited support)" data-pt="Oracle (suporte limitado)">Oracle (limited support)</li>
-            <li>Firebird 2.5</li>
+          <span class="package-card__label" data-en="backup &amp; restore for" data-pt="backup e restore para">backup &amp; restore for</span>
+          <ul class="compat-matrix__list" aria-label="Supported database engines">
+            <li>SQL Server <span class="compat-matrix__ver">2008–2022</span></li>
+            <li>MySQL <span class="compat-matrix__ver">5.7–8.4</span></li>
+            <li>MariaDB <span class="compat-matrix__ver">10.6–11.4</span></li>
+            <li>PostgreSQL <span class="compat-matrix__ver">12+</span></li>
+            <li>Oracle <span class="compat-matrix__ver">Data Pump</span></li>
+            <li>Firebird <span class="compat-matrix__ver">2.5–5</span></li>
+            <li>SQLite <span class="compat-matrix__ver">3</span></li>
           </ul>
+          <p class="compat-matrix__note" data-en="Integration-tested against 18 server versions running in containers." data-pt="Testado em integração contra 18 versões de servidor rodando em contêineres.">Integration-tested against 18 server versions running in containers.</p>
+        </div>
+
+        <div class="package-card__section">
+          <span class="package-card__label" data-en="what it does" data-pt="o que faz">what it does</span>
+          <ul class="features">
+            <li class="features__item">
+              <span class="features__key">sql-editor</span>
+              <p data-en="One session per tab, autocomplete and highlighting for each dialect, editable result grids, execution plans, CSV import, and exports to Excel, JSON and SQL scripts." data-pt="Uma sessão por aba, autocomplete e realce do dialeto de cada SGBD, grade de resultados editável, plano de execução, importação de CSV e exportação para Excel, JSON e scripts SQL.">One session per tab, autocomplete and highlighting for each dialect, editable result grids, execution plans, CSV import, and exports to Excel, JSON and SQL scripts.</p>
+            </li>
+            <li class="features__item">
+              <span class="features__key">object-designer</span>
+              <p data-en="Create and alter tables, views, triggers and routines through forms, with the DDL that will run shown live underneath." data-pt="Cria e altera tabelas, views, triggers e rotinas por formulário, com o DDL que vai rodar à vista, na hora.">Create and alter tables, views, triggers and routines through forms, with the DDL that will run shown live underneath.</p>
+            </li>
+            <li class="features__item">
+              <span class="features__key">backup-jobs</span>
+              <p data-en="Scheduled through the OS (Task Scheduler, launchd, cron) with retention, verify-by-restore, AES-256 zip, copies to SFTP, S3 or FTP, and email alerts." data-pt="Agendadas no próprio sistema (Agendador de Tarefas, launchd, cron), com retenção, conferência por restore, zip AES-256, cópia para SFTP, S3 ou FTP e aviso por e-mail.">Scheduled through the OS (Task Scheduler, launchd, cron) with retention, verify-by-restore, AES-256 zip, copies to SFTP, S3 or FTP, and email alerts.</p>
+            </li>
+            <li class="features__item">
+              <span class="features__key">compare-and-copy</span>
+              <p data-en="Diff two schemas and get the script in an order the server accepts, or copy a database to another server in one step." data-pt="Compara dois bancos e gera o script numa ordem que o servidor aceita, ou copia um banco para outro servidor de uma vez.">Diff two schemas and get the script in an order the server accepts, or copy a database to another server in one step.</p>
+            </li>
+            <li class="features__item">
+              <span class="features__key">production-guard</span>
+              <p data-en="Connections tagged as production ask for the database name before a restore and confirm every write in the editor." data-pt="Conexões marcadas como produção pedem o nome do banco antes do restore e confirmam toda alteração feita no editor.">Connections tagged as production ask for the database name before a restore and confirm every write in the editor.</p>
+            </li>
+            <li class="features__item">
+              <span class="features__key">ssh-tunnel</span>
+              <p data-en="Reach servers behind SSH with a password or key — backups, restores and the editor all go through the same tunnel. Passwords never touch the command line." data-pt="Acesso a servidores atrás de SSH, com senha ou chave — backup, restore e editor passam pelo mesmo túnel. Senha nunca vai para a linha de comando.">Reach servers behind SSH with a password or key — backups, restores and the editor all go through the same tunnel. Passwords never touch the command line.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="package-card__section">
+          <span class="package-card__label" data-en="command line" data-pt="linha de comando">command line</span>
+          <pre class="package-card__cli"><code><span class="package-card__cli-prompt" aria-hidden="true">$ </span>gsbd-util backup --job "Nightly"
+<span class="package-card__cli-prompt" aria-hidden="true">$ </span>gsbd-util backup --connection erp --database erp --dir /backups
+<span class="package-card__cli-comment"># exit 0 = done · 1 = a backup failed · 2 = bad arguments</span></code></pre>
         </div>
       </article>
       <!-- Next project card goes here: repeat the .package-card article above.
@@ -170,7 +219,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <p data-en="GSBD Util exists because most tools force you to pick one database engine to support well. This practice runs on the same idea: depth across disciplines, not a single narrow lane." data-pt="O GSBD Util existe porque a maioria das ferramentas obriga você a escolher um único SGBD para suportar bem. Esta prática segue a mesma ideia: profundidade em várias disciplinas, não uma única faixa estreita.">GSBD Util exists because most tools force you to pick one database engine to support well. This practice runs on the same idea: depth across disciplines, not a single narrow lane.</p>
       </div>
       <div class="changelog__entry">
-        <span class="changelog__tag" id="siteVersionTag">site v2.0.0</span>
+        <span class="changelog__tag" id="siteVersionTag">site v2.1.0</span>
         <p data-en="This page ships the way the tools it describes do — versioned, iterated, maintained." data-pt="Esta página é entregue do mesmo jeito que as ferramentas que descreve — versionada, iterada, mantida.">This page ships the way the tools it describes do — versioned, iterated, maintained.</p>
       </div>
     </div>
@@ -178,7 +227,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
   <section id="sponsor" class="sponsor">
     <h2 class="section-label" data-en="sponsor" data-pt="apoiar">sponsor</h2>
-    <p class="sponsor__intro" data-en="GSBD Util is free and open source. If it saved you time, consider chipping in to keep it maintained." data-pt="O GSBD Util é gratuito e de código aberto. Se ele te economizou tempo, considere contribuir para mantê-lo.">GSBD Util is free and open source. If it saved you time, consider chipping in to keep it maintained.</p>
+    <p class="sponsor__intro" data-en="GSBD Util is free for personal and commercial use. If it saved you time, consider chipping in to keep it maintained." data-pt="O GSBD Util é gratuito para uso pessoal e comercial. Se ele te economizou tempo, considere contribuir para mantê-lo.">GSBD Util is free for personal and commercial use. If it saved you time, consider chipping in to keep it maintained.</p>
 
     <div class="sponsor__options">
       <div class="sponsor-card">
@@ -254,7 +303,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 </main>
 
 <footer class="footer">
-  <span class="footer__repo">pdrmottadev/portfolio <span class="footer__version">v2.0.0</span></span>
+  <span class="footer__repo">pdrmottadev/portfolio <span class="footer__version">v2.1.0</span></span>
   <span class="footer__maintained" data-en="maintained by pdrmottadev" data-pt="mantido por pdrmottadev">maintained by pdrmottadev</span>
 </footer>
 
