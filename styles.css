@@ -560,6 +560,12 @@ main > section {
   margin-bottom: var(--space-4);
   flex-wrap: wrap;
 }
+.package-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  flex: none;
+}
 .package-card__icon {
   display: flex;
   align-items: center;

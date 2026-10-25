@@ -246,6 +246,59 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         </div>
       </article>
 
+      <article class="package-card package-card--site" id="project-winxpremix">
+        <header class="package-card__head">
+          <span class="package-card__icon" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M3 8h18"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+          </span>
+          <div class="package-card__title">
+            <h3 class="package-card__name">winxpremix</h3>
+            <p class="package-card__desc" data-en="Windows XP Luna theme for GNOME 50+" data-pt="Tema Windows XP Luna para o GNOME 50+">Windows XP Luna theme for GNOME 50+</p>
+          </div>
+          <div class="package-card__links">
+            <a class="package-card__link" href="https://github.com/pdrmottadev/WinXPRemix" target="_blank" rel="noopener">
+              <span data-en="Source on GitHub" data-pt="Código no GitHub">Source on GitHub</span>
+              <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M10 14 20 4"/><path d="M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/></svg>
+            </a>
+            <a class="package-card__link" href="https://www.opendesktop.org/p/2380317/" target="_blank" rel="noopener">
+              <span data-en="View on OpenDesktop" data-pt="Ver no OpenDesktop">View on OpenDesktop</span>
+              <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M10 14 20 4"/><path d="M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/></svg>
+            </a>
+          </div>
+        </header>
+
+        <ul class="package-card__meta" aria-label="Project facts">
+          <li><span class="badge badge--status badge--sm"><span class="badge__dot" aria-hidden="true"></span><span data-en="v1.1.1 released" data-pt="v1.1.1 publicada">v1.1.1 released</span></span></li>
+          <li><span class="badge badge--sm" data-en="personal project" data-pt="projeto pessoal">personal project</span></li>
+          <li><span class="badge badge--sm">gnome shell · gtk3 · gtk4</span></li>
+          <li><span class="badge badge--sm" data-en="GPL-3.0 · open source" data-pt="GPL-3.0 · código aberto">GPL-3.0 · open source</span></li>
+        </ul>
+
+        <div class="site-preview">
+          <a class="site-preview__frame" href="https://github.com/pdrmottadev/WinXPRemix" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <span class="site-preview__bar">GNOME 50 · libadwaita</span>
+            <img src="media/projects/winxpremix.webp" alt="" width="1280" height="800" loading="lazy">
+          </a>
+          <div class="site-preview__body">
+            <p class="package-card__body" data-en="WinXPRemix brings the Windows XP Luna look to a modern GNOME desktop: the blue taskbar, a green Start-style button, gradient title bars and yellow notification balloons — with rounded corners, a real dark mode and an original wallpaper. One SCSS palette feeds the Shell, GTK3 and GTK4/libadwaita themes." data-pt="O WinXPRemix traz o visual Luna do Windows XP para um GNOME moderno: a barra de tarefas azul, um botão verde no estilo do Iniciar, barras de título em degradê e balões de notificação amarelos — com cantos arredondados, modo escuro de verdade e um papel de parede original. Uma única paleta em SCSS gera os temas do Shell, do GTK3 e do GTK4/libadwaita.">WinXPRemix brings the Windows XP Luna look to a modern GNOME desktop: the blue taskbar, a green Start-style button, gradient title bars and yellow notification balloons — with rounded corners, a real dark mode and an original wallpaper. One SCSS palette feeds the Shell, GTK3 and GTK4/libadwaita themes.</p>
+            <span class="package-card__label" data-en="under the hood" data-pt="por baixo">under the hood</span>
+            <ul class="compat-matrix__list" aria-label="Technical details">
+              <li data-en="SCSS → Shell, GTK3, GTK4" data-pt="SCSS → Shell, GTK3, GTK4">SCSS → Shell, GTK3, GTK4</li>
+              <li data-en="libadwaita override" data-pt="override do libadwaita">libadwaita override</li>
+              <li data-en="lock-screen extension" data-pt="extensão da tela de bloqueio">lock-screen extension</li>
+              <li data-en="follows dark mode" data-pt="segue o modo escuro">follows dark mode</li>
+              <li data-en="Flatpak apps themed" data-pt="apps Flatpak com o tema">Flatpak apps themed</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="package-card__section">
+          <span class="package-card__label" data-en="install" data-pt="instalação">install</span>
+          <pre class="package-card__cli"><code><span class="package-card__cli-prompt" aria-hidden="true">$ </span>./install.sh     <span class="package-card__cli-comment"># everything in your home folder, no sudo</span>
+<span class="package-card__cli-prompt" aria-hidden="true">$ </span>./uninstall.sh   <span class="package-card__cli-comment"># restores your previous theme and wallpaper</span></code></pre>
+        </div>
+      </article>
+
       <!-- New project: copy the closest article above and give it id="project-<slug>".
            Website → .package-card--site (screenshot in media/projects/<slug>.webp, 1280×800,
            taken from the live home page). Tool/app → plain .package-card; keep .compat-matrix
@@ -350,7 +403,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 </main>
 
 <footer class="footer">
-  <span class="footer__repo">pdrmottadev/portfolio <span class="footer__version">v2.25.3</span></span>
+  <span class="footer__repo">pdrmottadev/portfolio <span class="footer__version">v2.25.4</span></span>
   <span class="footer__maintained" data-en="maintained by pdrmottadev" data-pt="mantido por pdrmottadev">maintained by pdrmottadev</span>
 </footer>
 
