@@ -299,6 +299,59 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         </div>
       </article>
 
+      <article class="package-card package-card--site" id="project-gnomeglass">
+        <header class="package-card__head">
+          <span class="package-card__icon" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 15 13 9"/><path d="M10 16l4-4"/></svg>
+          </span>
+          <div class="package-card__title">
+            <h3 class="package-card__name">gnomeglass</h3>
+            <p class="package-card__desc" data-en="Glass theme for GNOME 50+" data-pt="Tema de vidro para o GNOME 50+">Glass theme for GNOME 50+</p>
+          </div>
+          <div class="package-card__links">
+            <a class="package-card__link" href="https://github.com/pdrmottadev/GNOMEGlass" target="_blank" rel="noopener">
+              <span data-en="Source on GitHub" data-pt="Código no GitHub">Source on GitHub</span>
+              <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M10 14 20 4"/><path d="M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/></svg>
+            </a>
+            <a class="package-card__link" href="https://www.opendesktop.org/p/2380399/" target="_blank" rel="noopener">
+              <span data-en="View on OpenDesktop" data-pt="Ver no OpenDesktop">View on OpenDesktop</span>
+              <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M10 14 20 4"/><path d="M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/></svg>
+            </a>
+          </div>
+        </header>
+
+        <ul class="package-card__meta" aria-label="Project facts">
+          <li><span class="badge badge--status badge--sm"><span class="badge__dot" aria-hidden="true"></span><span data-en="v1.1.0 released" data-pt="v1.1.0 publicada">v1.1.0 released</span></span></li>
+          <li><span class="badge badge--sm" data-en="personal project" data-pt="projeto pessoal">personal project</span></li>
+          <li><span class="badge badge--sm">gnome shell · gtk3 · gtk4</span></li>
+          <li><span class="badge badge--sm" data-en="GPL-3.0 · open source" data-pt="GPL-3.0 · código aberto">GPL-3.0 · open source</span></li>
+        </ul>
+
+        <div class="site-preview">
+          <a class="site-preview__frame" href="https://github.com/pdrmottadev/GNOMEGlass" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <span class="site-preview__bar">GNOME 50 · libadwaita</span>
+            <img src="media/projects/gnomeglass.webp" alt="" width="1280" height="800" loading="lazy">
+          </a>
+          <div class="site-preview__body">
+            <p class="package-card__body" data-en="GNOME Glass is a glass theme inspired by Windows Aero and Apple's Liquid Glass, with a look of its own: the top bar becomes three floating glass islands, title bars and controls take on your accent color, the sidebar floats as its own pane, and the window controls are glass orbs. Frosted glass by day, smoked glass by night — with an original wallpaper and a matching cursor set." data-pt="O GNOME Glass é um tema de vidro inspirado no Aero do Windows e no Liquid Glass da Apple, mas com cara própria: a barra superior vira três ilhas de vidro flutuantes, as barras de título e os controles assumem a sua cor de destaque, a barra lateral flutua como um painel à parte e os botões da janela são orbes de vidro. Vidro fosco de dia, vidro fumê à noite — com papel de parede original e um conjunto de cursores combinando.">GNOME Glass is a glass theme inspired by Windows Aero and Apple's Liquid Glass, with a look of its own: the top bar becomes three floating glass islands, title bars and controls take on your accent color, the sidebar floats as its own pane, and the window controls are glass orbs. Frosted glass by day, smoked glass by night — with an original wallpaper and a matching cursor set.</p>
+            <span class="package-card__label" data-en="under the hood" data-pt="por baixo">under the hood</span>
+            <ul class="compat-matrix__list" aria-label="Technical details">
+              <li data-en="SCSS → Shell, GTK3, GTK4" data-pt="SCSS → Shell, GTK3, GTK4">SCSS → Shell, GTK3, GTK4</li>
+              <li data-en="follows the accent color" data-pt="segue a cor de destaque">follows the accent color</li>
+              <li data-en="cursors drawn in code" data-pt="cursores desenhados em código">cursors drawn in code</li>
+              <li data-en="headless Shell test harness" data-pt="Shell headless para testes">headless Shell test harness</li>
+              <li data-en="Flatpak apps themed" data-pt="apps Flatpak com o tema">Flatpak apps themed</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="package-card__section">
+          <span class="package-card__label" data-en="install" data-pt="instalação">install</span>
+          <pre class="package-card__cli"><code><span class="package-card__cli-prompt" aria-hidden="true">$ </span>./install.sh     <span class="package-card__cli-comment"># everything in your home folder, no sudo</span>
+<span class="package-card__cli-prompt" aria-hidden="true">$ </span>./uninstall.sh   <span class="package-card__cli-comment"># restores your previous theme, cursor and wallpaper</span></code></pre>
+        </div>
+      </article>
+
       <!-- New project: copy the closest article above and give it id="project-<slug>".
            Website → .package-card--site (screenshot in media/projects/<slug>.webp, 1280×800,
            taken from the live home page). Tool/app → plain .package-card; keep .compat-matrix
@@ -403,7 +456,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 </main>
 
 <footer class="footer">
-  <span class="footer__repo">pdrmottadev/portfolio <span class="footer__version">v2.25.4</span></span>
+  <span class="footer__repo">pdrmottadev/portfolio <span class="footer__version">v2.26.6</span></span>
   <span class="footer__maintained" data-en="maintained by pdrmottadev" data-pt="mantido por pdrmottadev">maintained by pdrmottadev</span>
 </footer>
 
